@@ -1,0 +1,9 @@
+.vitrine-produtos {
+  list-style: none;
+  padding: 0;
+  margin-left: 16px;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 380px;
+}
