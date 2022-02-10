@@ -44,6 +44,18 @@ function App() {
     }
   };
 
+  const deleteOneSale = (idDelete) => {
+    const actualSales = currentSale.filter(({ id }) => {
+      return id !== idDelete;
+    });
+
+    setCurrentSale(actualSales);
+  };
+
+  const deleteAllSales = () => {
+    setCurrentSale([]);
+  };
+
   const changeSearch = (value) => {
     setSearch(value);
   };
@@ -58,7 +70,11 @@ function App() {
           handleClick={handleClick}
           currentSale={currentSale}
         />
-        <Cart currentSale={currentSale} />
+        <Cart
+          currentSale={currentSale}
+          deleteAllSales={deleteAllSales}
+          deleteOneSale={deleteOneSale}
+        />
       </main>
     </div>
   );

@@ -80,3 +80,14 @@
   font-weight: 600;
   font-size: 14px;
 }
+
+@media (min-width: 1055px) {
+  .vitrine__produtos--produto {
+    margin-bottom: 12px;
+  }
+
+  .vitrine__produtos--produto button {
+    position: absolute;
+    margin-top: 275px;
+  }
+}

@@ -1,7 +1,7 @@
 import "./styles.css";
 import Button from "../Button";
 
-const CartTotal = ({ currentSale }) => {
+const CartTotal = ({ currentSale, deleteAllSales }) => {
   return (
     <div className="bloco__cartTotal">
       <h3>Total</h3>
@@ -13,7 +13,9 @@ const CartTotal = ({ currentSale }) => {
           }, 0)
           .toFixed(2)}
       </span>
-      <Button secondaryColor>Remover Todos</Button>
+      <Button secondaryColor onClick={deleteAllSales}>
+        Remover Todos
+      </Button>
     </div>
   );
 };

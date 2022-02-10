@@ -31,3 +31,9 @@
   font-size: 16px;
   margin-top: -10px;
 }
+
+@media (max-width: 390px) {
+  .bloco__cartTotal {
+    width: 270px;
+  }
+}

@@ -67,3 +67,9 @@ li .remover__produtosCart {
   font-weight: 500;
   color: #bdbdbd;
 }
+
+@media (max-width: 390px) {
+  .product-cart div {
+    width: 95px;
+  }
+}

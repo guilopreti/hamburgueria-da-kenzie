@@ -23,3 +23,23 @@
   font-weight: 700;
   font-size: 23px;
 }
+
+@media (min-width: 1055px) {
+  .bloco__vitrineProdutos {
+    width: 70%;
+    height: 100%;
+  }
+
+  .vitrine-produtos {
+    overflow-x: initial;
+    overflow-y: initial;
+    flex-wrap: wrap;
+    height: auto;
+  }
+}
+
+@media (min-width: 1398px) {
+  .bloco__vitrineProdutos {
+    width: 988px;
+  }
+}

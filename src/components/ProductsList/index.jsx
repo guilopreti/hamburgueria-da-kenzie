@@ -3,7 +3,7 @@ import "./styles.css";
 
 const ProductsList = ({ filteredProducts, search, handleClick }) => {
   return (
-    <div>
+    <div className="bloco__vitrineProdutos">
       {search !== "" && (
         <p className="resultado-busca">
           Resultados para: <span>{search}</span>

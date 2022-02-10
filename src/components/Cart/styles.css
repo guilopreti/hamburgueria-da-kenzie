@@ -48,3 +48,26 @@
   padding-top: 20px;
   background-color: #f5f5f5;
 }
+
+.cart__products ul {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 325px;
+}
+
+@media (min-width: 1055px) {
+  .cart {
+    align-self: flex-start;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 390px) {
+  .cart {
+    width: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

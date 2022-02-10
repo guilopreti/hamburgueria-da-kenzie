@@ -56,3 +56,26 @@ p span {
   background-color: #27ae60;
   color: white;
 }
+
+@media (min-width: 1055px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 110px;
+    margin-bottom: 35px;
+  }
+
+  header p {
+    margin-left: 110px;
+  }
+
+  .div-busca {
+    margin-right: 115px;
+  }
+}
+
+@media (max-width: 390px) {
+  .div-busca {
+    width: 285px;
+  }
+}

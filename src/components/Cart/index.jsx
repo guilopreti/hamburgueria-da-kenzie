@@ -2,7 +2,7 @@ import CartProduct from "../CartProduct";
 import CartTotal from "../CartTotal";
 import "./styles.css";
 
-const Cart = ({ currentSale }) => {
+const Cart = ({ currentSale, deleteAllSales, deleteOneSale }) => {
   return (
     <section className="cart">
       <div className="cart__title">
@@ -23,11 +23,15 @@ const Cart = ({ currentSale }) => {
                   name={name}
                   category={category}
                   id={id}
+                  deleteOneSale={deleteOneSale}
                 />
               );
             })}
           </ul>
-          <CartTotal currentSale={currentSale} />
+          <CartTotal
+            currentSale={currentSale}
+            deleteAllSales={deleteAllSales}
+          />
         </div>
       )}
     </section>

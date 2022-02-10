@@ -1,7 +1,6 @@
-import Button from "../Button";
 import "./styles.css";
 
-const CartProduct = ({ img, name, category, id }) => {
+const CartProduct = ({ img, name, category, id, deleteOneSale }) => {
   return (
     <li key={id} className="product-cart">
       <figure>
@@ -22,7 +21,9 @@ const CartProduct = ({ img, name, category, id }) => {
         <h2>{name}</h2>
         <span>{category}</span>
       </div>
-      <span className="remover__produtosCart">Remover</span>
+      <span onClick={() => deleteOneSale(id)} className="remover__produtosCart">
+        Remover
+      </span>
     </li>
   );
 };
