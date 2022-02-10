@@ -1,7 +1,7 @@
 import Button from "../Button";
 import "./styles.css";
 
-const Product = ({ id, name, category, price, img }) => {
+const Product = ({ id, name, category, price, img, handleClick }) => {
   return (
     <li key={id} className="vitrine__produtos--produto">
       <figure>
@@ -22,7 +22,13 @@ const Product = ({ id, name, category, price, img }) => {
       <h2>{name}</h2>
       <span className="category">{category}</span>
       <span className="price">R$ {price.toFixed(2)}</span>
-      <Button>Adicionar</Button>
+      <Button
+        onClick={function () {
+          handleClick(id);
+        }}
+      >
+        Adicionar
+      </Button>
     </li>
   );
 };

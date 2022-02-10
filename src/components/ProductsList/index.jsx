@@ -1,11 +1,16 @@
 import Product from "../Product";
 import "./styles.css";
 
-const ProductsList = ({ products }) => {
+const ProductsList = ({ filteredProducts, search, handleClick }) => {
   return (
     <div>
+      {search !== "" && (
+        <p className="resultado-busca">
+          Resultados para: <span>{search}</span>
+        </p>
+      )}
       <ul className="vitrine-produtos">
-        {products.map(({ id, name, category, price, img }) => {
+        {filteredProducts.map(({ id, name, category, price, img }) => {
           return (
             <Product
               id={id}
@@ -13,6 +18,7 @@ const ProductsList = ({ products }) => {
               category={category}
               price={price}
               img={img}
+              handleClick={handleClick}
             />
           );
         })}
